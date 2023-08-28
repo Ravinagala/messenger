@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+       <changeSet id="create_user_relationship" author="ravi">
+           <createTable tableName="user_relationship">
+               <column name="id" type="int" autoIncrement="true">
+                   <constraints primaryKey="true"/>
+               </column>
+
+               <column name="user1_id" type="int">
+
+               </column>
+
+               <column name="user2_id" type="int">
+
+               </column>
+           </createTable>
+       </changeSet>
+
+    <changeSet id="add_fk" author="ravi">
+        <addForeignKeyConstraint baseTableName="user_relationship" baseColumnNames="user1_id" constraintName="fk_user_relationship_user1_id" referencedTableName="users"
+                                 referencedColumnNames="id" onDelete="CASCADE"/>
+
+        <addForeignKeyConstraint baseTableName="user_relationship" baseColumnNames="user2_id" constraintName="fk_user_relationship_user2_id" referencedTableName="users"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+
+</databaseChangeLog>

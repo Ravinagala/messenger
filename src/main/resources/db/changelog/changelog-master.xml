@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+
+        <include file="classpath:db/changelog/createuser.xml"/>
+        <include file="classpath:db/changelog/createworkspace.xml"/>
+        <include file="classpath:db/changelog/createworkspacemember.xml"/>
+        <include file="classpath:db/changelog/createthread.xml"/>
+        <include file="classpath:db/changelog/createthreadmessage.xml"/>
+        <include file="classpath:db/changelog/createuserrelationship.xml"/>
+        <include file="classpath:db/changelog/insertusers.xml"/>
+        <include file="classpath:db/changelog/insertworkspace.xml"/>
+        <include file="classpath:db/changelog/insertworkspace_members.xml"/>
+        <include file="classpath:db/changelog/inserthreads.xml"/>
+        <include file="classpath:db/changelog/insertthread_messages.xml"/>
+        <include file="classpath:db/changelog/insert_user_relationship.xml"/>
+</databaseChangeLog>

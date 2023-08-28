@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+
+    <changeSet id="create_workspace_member" author="ravi">
+        <createTable tableName="workspace_members">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="user_id" type="int">
+
+            </column>
+
+            <column name="workspace_id" type="int">
+
+            </column>
+
+        </createTable>
+
+
+    </changeSet>
+    
+    <changeSet id="add_fk" author="ravi">
+        <addForeignKeyConstraint baseTableName="workspace_members" baseColumnNames="user_id" constraintName="fk_workspace_member_user_id" referencedTableName="users"
+                                 referencedColumnNames="id" onDelete="CASCADE"/>
+
+        <addForeignKeyConstraint baseTableName="workspace_members" baseColumnNames="workspace_id" constraintName="fk_workspace_member_workspace_id" referencedTableName="workspace"
+                                 referencedColumnNames="id" onDelete="CASCADE"/>
+    </changeSet>
+
+
+</databaseChangeLog>

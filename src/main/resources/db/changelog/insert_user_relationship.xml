@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+    
+    <changeSet id="insert_user_relationship" author="ravi">
+        <insert tableName="user_relationship">
+            <column name="user1_id" value="101"/>
+            <column name="user2_id" value="102"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert_user_relationship_table" author="ravi">
+        <insert tableName="user_relationship">
+            <column name="user1_id" value="101"/>
+            <column name="user2_id" value="103"/>
+        </insert>
+
+        <insert tableName="user_relationship">
+            <column name="user1_id" value="102"/>
+            <column name="user2_id" value="103"/>
+        </insert>
+
+        <insert tableName="user_relationship">
+            <column name="user1_id" value="104"/>
+            <column name="user2_id" value="101"/>
+        </insert>
+
+        <insert tableName="user_relationship">
+            <column name="user1_id" value="105"/>
+            <column name="user2_id" value="104"/>
+        </insert>
+
+        <insert tableName="user_relationship">
+            <column name="user1_id" value="102"/>
+            <column name="user2_id" value="105"/>
+        </insert>
+
+        <insert tableName="user_relationship">
+            <column name="user1_id" value="105"/>
+            <column name="user2_id" value="106"/>
+        </insert>
+    </changeSet>
+    
+
+</databaseChangeLog>    
